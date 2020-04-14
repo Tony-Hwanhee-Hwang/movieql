@@ -1,22 +1,24 @@
 {
-  "name": "movieql",
-  "version": "1.0.0",
-  "description": "make graphQL API server",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tony-Hwanhee-Hwang/movieql.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Tony-Hwanhee-Hwang/movieql/issues"
-  },
-  "homepage": "https://github.com/Tony-Hwanhee-Hwang/movieql#readme",
-  "dependencies": {
-    "graphql-yoga": "^1.18.3"
-  }
+	"name": "movieql",
+	"version": "1.0.0",
+	"description": "make graphQL API server",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --exec babel-node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tony-Hwanhee-Hwang/movieql.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Tony-Hwanhee-Hwang/movieql/issues"
+	},
+	"homepage": "https://github.com/Tony-Hwanhee-Hwang/movieql#readme",
+	"dependencies": {
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-stage-3": "^6.24.1",
+		"graphql-yoga": "^1.18.3"
+	}
 }

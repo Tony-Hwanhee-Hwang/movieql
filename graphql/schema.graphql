@@ -1,0 +1,12 @@
+type Hero {
+	id: Int!
+	name: String!
+	hero_name: String!
+	gender: String!
+	age: Int!
+}
+
+type Query {
+	avengers: [Hero]!
+	hero(id: Int!): Hero
+}
