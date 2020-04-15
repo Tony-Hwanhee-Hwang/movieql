@@ -1,91 +1,47 @@
-export const Avengers = [
+let movies = [
+	{
+		id: 0,
+		name: "Star Wars - The new one",
+		score: 1,
+	},
 	{
 		id: 1,
-		name: "Tony Stark",
-		hero_name: "Ironman",
-		gender: "male",
-		age: 53,
+		name: "Avengers - The new one",
+		score: 8,
 	},
 	{
 		id: 2,
-		name: "Steve Rogers",
-		hero_name: "Captin America",
-		gender: "male",
-		age: 100,
+		name: "The Godfather I",
+		score: 99,
 	},
 	{
 		id: 3,
-		name: "Natasha Romanoff",
-		hero_name: "Black Widow",
-		gender: "female",
-		age: 38,
-	},
-	{
-		id: 4,
-		name: "Thor Odinson",
-		hero_name: "Thor",
-		gender: "male",
-		age: 1500,
-	},
-	{
-		id: 5,
-		name: "Bruce Banner",
-		hero_name: "Hulk",
-		gender: "male",
-		age: 54,
-	},
-	{
-		id: 6,
-		name: "Peter Parker",
-		hero_name: "Spiderman",
-		gender: "male",
-		age: 15,
-	},
-	{
-		id: 7,
-		name: "Clinton Barton",
-		hero_name: "Hawkeye",
-		gender: "male",
-		age: 52,
-	},
-	{
-		id: 8,
-		name: "Scott Lang",
-		hero_name: "Antman",
-		gender: "male",
-		age: 43,
-	},
-	{
-		id: 9,
-		name: "Wanda Maximoff",
-		hero_name: "Scarlet Witch",
-		gender: "female",
-		age: 23,
-	},
-	{
-		id: 10,
-		name: "Vision",
-		hero_name: "Vision",
-		gender: "male",
-		age: 3,
-	},
-	{
-		id: 11,
-		name: "Carol Danvers",
-		hero_name: "Captain Marvel",
-		gender: "female",
-		age: 73,
-	},
-	{
-		id: 12,
-		name: "Stephen Strange",
-		hero_name: "Doctor Strange",
-		gender: "male",
-		age: 42,
+		name: "Logan",
+		score: 2,
 	},
 ];
 
+export const getMovies = () => movies;
+
 export const getById = (id) => {
-	const filteredHero = Avengers.filter((hero) => hero.id == id);
-	return filteredHero[0];
+	const filteredMovie = movies.filter((movie) => movie.id === id);
+	return filteredMovie[0];
+};
+
+export const deleteMovie = (id) => {
+	const clearedMovie = movies.filter((movie) => movie.id !== id);
+	if (movies.length > clearedMovie.length) {
+		movies = clearedMovie;
+		return true;
+	} else return false;
+};
+
+export const addMovie = (name, score) => {
+	const newMovie = {
+		id: `${movies.length + 1}`,
+		name,
+		score,
+	};
+	movies.push(newMovie);
+	return newMovie;
 };

@@ -1,12 +1,15 @@
-type Hero {
+type movie {
 	id: Int!
 	name: String!
-	hero_name: String!
-	gender: String!
-	age: Int!
+	score: Int!
 }
 
 type Query {
-	avengers: [Hero]!
-	hero(id: Int!): Hero
+	movies: [movie]!
+	movie(id: Int!): movie
+}
+
+type Mutation {
+	addMovie(name: String!, score: Int!): movie
+	deleteMovie(id: Int!): Boolean!
 }
